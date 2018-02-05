@@ -1,7 +1,7 @@
 react-decorator
 ===
 
-###first
+first
 	this code is use typescript
 	when you want to use decorator
 	you need add the `"experimentalDecorators": true` in the tsconfig.json
@@ -9,43 +9,43 @@ react-decorator
 
 Render
 ---
-###What does it work
+What does it work
 	the decorate can let you use string or load file instead of write render function in class
 
-###How to use
+How to use
 	`import { Render } from "./decorates/Render";`
 	if you want to use two method or three method, you need use `string-jsx`;
 	`string-jsx` in https://github.com/wisdomofgod/string-jsx;
 
-###First Method
+First Method
 	@Render(
 		template: function(){
 			return <div></div>
 		}
 	)
 
-###Two Method
+Two Method
 	@Render(
 		templateUrl: "./src/renderExample/example"
 	)
 
 	This path is relative to where you run `webpack`
 
-###Three Method
+Three Method
 	@Render(
 		template: `<div></div>`
 	)
 
 Connect
 ---
-###What does it work
+What does it work
 	the decorate can return container component from presentational component
 
-###How to use
+How to use
 	`import { Connect } from "./decorates/Connect";`
 	you need use react-redux, you can use `npm install --save-dev react-redux` to install react-redux
 
-###First Method
+First Method
 	@Connect(
 		function(state: any) {
 			return {
@@ -59,7 +59,7 @@ Connect
 		}
 	)
 
-###Two Method
+Two Method
 	@Connect(
 		['count'], [{onClick: {type: "ON_CLICK"}}]
 	)
@@ -70,13 +70,13 @@ Connect
 
 runTime
 ---
-###What does it work
+What does it work
 	the decorate can console.log how long has this function running; 
 
-###How to use
+How to use
 	`import { runTime } from "./decorates/runTime";`
 
-###First Method(sync)
+First Method(sync)
 	class Test {
 
 		@runTime()
@@ -85,7 +85,7 @@ runTime
 		}
 	}
 
-###Second Method(async)
+Second Method(async)
 	class Test {
 
 		@runTime(true)
@@ -101,10 +101,10 @@ runTime
 
 Example
 ---
-###First
+First
 	change the shell path to example and run `npm install`
 
-###Second
+Second
 	run `webpack-dev-server`
 	this example have four routers
 	/#/
